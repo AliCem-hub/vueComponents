@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       Header: "",
-      Text: "Info Text",
+      Text: "Ali",
       Style: "green-info",
       Icon: "",
       Border: true
