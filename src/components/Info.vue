@@ -1,11 +1,15 @@
 <template>
   <div class="info" :class="Style">
     <div class="info-icon" v-if="Icon">
-      <img alt="info-img" :src="getImgUrl(pic)" style="width: 30px;">
+      <img alt="info-img" :src="getImgUrl(pic)" style="width: 35px;">
+
     </div>
+
     <div class="info-content">
-      <h1 class="info-header" v-if="Header">{{ Header }}</h1>
-      <h3 class="info-text" v-if="Text">{{ Text }}</h3>
+       <h1 class="info-header" v-if="Header">{{ Header }}</h1>
+      <h3 class="info-text" v-if="Text">{{ Text }}<button class="btn btn-success">{{ ButonAciklama }}</button>
+</h3>
+
     </div>
   </div>
 </template>
@@ -16,6 +20,7 @@ export default {
   props: [
     'Header',
     'Text',
+    'ButonAciklama',
     'Style',
     'Border',
     'FontType',
@@ -32,26 +37,31 @@ export default {
 
 <style scoped>
 .info {
-  width: 40%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 30px;
-  margin-left: 50px ;
-  border-radius: 25px;
-  margin-top: 50px;
+  width: 45%;
+  padding-top: 9px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  margin-left: 500px ;
+  border-radius: 80px;
+  margin-top: 100px;
 
 }
 .info-icon {
-  width: 20%;
+  width: 10%;
 }
 .info-content {
   width: 80%;
 }
 .info-content .info-header {
-  color:black;
+  color:red;
+    margin-left: 80px ;
 }
 .info-content .info-text {
   color:black;
+  margin-left: 80px ;
+}
+.info-content .btn-success {
+  color: rgb(232, 237, 229);
 }
 .info.blue-info {
   background: lightskyblue;
